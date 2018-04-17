@@ -1,16 +1,18 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .app {
-  display: flex;
-}
-
-.main {
-  flex-basis: 40%;
+  flex-basis: 50%;
   display: flex;
   flex-direction: row;
 }
+
+/* .main {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: row;
+} */
 
 .map {
   flex-grow: 1;
@@ -26,7 +28,7 @@
 }
 
 .search input {
-  height: 40px;
+  height: 30px;
   font-size: 20px;
   padding-left: 5px;
   color: #999;

@@ -4,6 +4,7 @@ import { Link, Switch, Route, Redirect } from 'react-router-dom'
 import About from './components/About/About'
 import './App.css';
 import Marker from './components/Marker/Marker'
+import Country from './components/Country/Country'
 
 class App extends Component {
   constructor (props) {
@@ -39,40 +40,33 @@ class App extends Component {
 
     return (
       <div className='app'>
-          <nav className='nav'>
-          <h1>Country Study</h1>
-          {/* TWO <Link>s, one to the homepage and the other to About page */}
-          <Link to='/search'> Home </Link>
-          <Link to='/about'> About</Link>
-        </nav>
+       
         <div className='main'>
+        <div className="search"> 
+             <input type="text" placeholder="Search..." value={this.state.search}
+             onChange={this.handleSearch} />
+           </div>
+          <Switch>
+              <Route exact path='/country' render={() => <Country />} />
+              <Route exact path='/about' render={() => <About />} />
+          </Switch>
 
-            <div className="search">  
-            <input type="text" placeholder="Search..." value={this.state.search}
-              onChange={this.handleSearch} />
-            </div>
-
-            <div className='data'>
-            </div>
+          
         </div>
-
         <div className='map'>
-        <GoogleMapReact
-              center={center}
-              // getting map closer to center increase the below number in ZOOM
-              zoom={1}>
-                {this.state.countries.map((country) => { return <Marker 
-                  key={country.name} lat={country.lat} 
-                  lng={country.lng} text={country.desc} 
-                  selected={country === this.state.selectedCountry}     
-                  />
-                })}
-            </GoogleMapReact>
-            <Switch>
-            <Route path='/about' render={() => <About  />} />
-            </Switch>
+               <GoogleMapReact
+                 center={center}
+                 // getting map closer to center increase the below number in ZOOM
+                 zoom={1}>
+                   {this.state.countries.map((country) => { return <Marker
+                     key={country.name} lat={country.lat}
+                     lng={country.lng} text={country.desc}
+                     selected={country === this.state.selectedCountry}    
+                     />
+                   })}
+               </GoogleMapReact>
         </div>
-    </div>
+      </div>
     );
   }
 }
