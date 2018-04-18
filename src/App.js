@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react'
 import { Link, Switch, Route, Redirect } from 'react-router-dom' 
 import About from './components/About/About'
 import './App.css';
+import Home from './components/Home/Home'
 import Marker from './components/Marker/Marker'
 import Country from './components/Country/Country'
 
@@ -40,19 +41,21 @@ class App extends Component {
 
     return (
       <div className='app'>
-       
         <div className='main'>
-        <div className="search"> 
+          <div className="search"> 
              <input type="text" placeholder="Search..." value={this.state.search}
              onChange={this.handleSearch} />
            </div>
-          <Switch>
+           <Switch>
+              <Route path='/home' render={() => <Home />} />
               <Route exact path='/country' render={() => <Country />} />
               <Route exact path='/about' render={() => <About />} />
-          </Switch>
-
-          
+           </Switch>  
         </div>
+
+        {/* <Chart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>
+        <Chart chartData={this.state.chartData} location="New York" legendPosition="top"/> */}
+
         <div className='map'>
                <GoogleMapReact
                  center={center}
