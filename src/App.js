@@ -6,6 +6,7 @@ import './App.css';
 import Home from './components/Home/Home'
 import Marker from './components/Marker/Marker'
 import Country from './components/Country/Country'
+import Chart from './components/Chart/Chart';
 
 class App extends Component {
   constructor (props) {
@@ -13,17 +14,11 @@ class App extends Component {
     this.state = {
       countries: [],
       selectedCountry: null,
-      search: ''
+      search: '',
+      chartData:{}
     }
   }
-
-  selectCountry = (country) => {
-    console.log(country)
-    this.setState({
-      selectedCountry: country
-    })
-  }
-
+  
   handleSearch = (event) => {
     // this.setState({
     //   search: event.target.value,
@@ -42,20 +37,19 @@ class App extends Component {
     return (
       <div className='app'>
         <div className='main'>
+        
           <div className="search"> 
              <input type="text" placeholder="Search..." value={this.state.search}
              onChange={this.handleSearch} />
            </div>
            <Switch>
               <Route path='/home' render={() => <Home />} />
+              <Route exact path='/chart' render={() => <Chart />} />
               <Route exact path='/country' render={() => <Country />} />
               <Route exact path='/about' render={() => <About />} />
            </Switch>  
         </div>
-
-        {/* <Chart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>
-        <Chart chartData={this.state.chartData} location="New York" legendPosition="top"/> */}
-
+      
         <div className='map'>
                <GoogleMapReact
                  center={center}
