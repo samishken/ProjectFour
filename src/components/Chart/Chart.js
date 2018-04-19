@@ -10,9 +10,9 @@ class Chart extends Component{
   }
 
   static defaultProps = {
-    displayTitle:true,
+    displayTitle: true,
     displayLegend: true,
-    legendPosition:'right',
+    legendPosition:'top',
     location:'Region'
   }
 
@@ -24,20 +24,38 @@ class Chart extends Component{
     // Ajax calls here
     this.setState({
       chartData:{
-        labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+        labels: [
+            'United Arab Emirates', 'Egypt', 'Saudi Arabia', 'Syria', 'Bahrain', 'Djibouti', 'Algeria', 'Iran', 'Iraq', 
+            'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Libya'
+        ],
         datasets:[
           {
-            label:'Population',
+            label:'gdp_pc',
             data:[
-              617594,
-              181045,
-              153060,
-              106519,
-              105162,
-              95072
+              49600,
+              6200,
+              24200,
+              4800,
+              40300,
+              2800,
+              7300,
+              10600,
+              3800,
+              29800,
+              5400,
+              48900,
+              14400,
+              14000    
             ],
             backgroundColor:[
-              'rgba(255, 99, 132, 0.6)',
+              'rgba(204, 43, 28)',
+              'rgba(204, 63, 165)',
+              'rgba(102, 34, 28)',
+              'rgba(161, 236, 83)',
+              'rgba(82, 102, 28)',
+              'rgba(201, 187, 63)',
+              'rgba(49, 126, 255)',
+              'rgba(142, 236, 119)',
               'rgba(54, 162, 235, 0.6)',
               'rgba(255, 206, 86, 0.6)',
               'rgba(75, 192, 192, 0.6)',
@@ -66,7 +84,7 @@ class Chart extends Component{
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Income level of '+this.props.location,
+              text:'Populagtion of '+this.props.location,
               fontSize:25
             },
             legend:{
@@ -80,7 +98,7 @@ class Chart extends Component{
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Income level of '+this.props.location,
+              text:'GDP Per Capital '+this.props.location,
               fontSize:25
             },
             legend:{

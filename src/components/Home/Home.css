@@ -5,3 +5,19 @@
 .homeimage {
     width: 100%; 
 }
+
+.container {
+    text-align: center;
+}
+
+#button0, #button1, #button2, #button3, #button4, #button5, #button6 {
+    background-color: red;
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
+    font-weight: bold;
+}

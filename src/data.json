@@ -2171,7 +2171,7 @@
     {
     "id": "EGY",
     "iso2Code": "EG",
-    "name": "Egypt, Arab Rep.",
+    "name": "Egypt",
     "region": {
     "id": "MEA",
     "value": "Middle East & North Africa"
@@ -3299,7 +3299,7 @@
     {
     "id": "IRN",
     "iso2Code": "IR",
-    "name": "Iran, Islamic Rep.",
+    "name": "Iran",
     "region": {
     "id": "MEA",
     "value": "Middle East & North Africa"
