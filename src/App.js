@@ -7,8 +7,7 @@ import Home from './components/Home/Home'
 import Marker from './components/Marker/Marker'
 import Country from './components/Country/Country'
 import Chart from './components/Chart/Chart';
-import LineChart from './components/Linechart/Linechart'
-import Piechart from './components/Piechart/Piechart'
+
 
 class App extends Component {
   constructor (props) {
@@ -16,10 +15,7 @@ class App extends Component {
     this.state = {
       countries: [],
       selectedCountry: null,
-      search: '',
-      chartData:{},
-      lineChart:{},
-      pieChart:{}
+      search: ''
     }
   }
   

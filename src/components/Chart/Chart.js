@@ -72,27 +72,26 @@ class Chart extends Component{
       },
       pieChart: {
         labels: [
-          'United Arab Emirates', 'Egypt', 'Saudi Arabia', 'Syria', 'Bahrain', 'Djibouti', 'Algeria', 'Iran', 'Iraq', 
+          'United Arab Emirates', 'Egypt', 'Saudi Arabia', 'Bahrain', 'Djibouti', 'Algeria', 'Iran', 'Iraq', 
           'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Libya'
       ],
       datasets:[
         {
           label:'gdp_pc',
           data:[
-            49600,
-            6200,
-            24200,
-            4800,
-            40300,
-            2800,
-            7300,
-            10600,
-            3800,
-            29800,
-            5400,
-            48900,
-            14400,
-            14000    
+            8985705,
+            8106800,
+            7452533,
+            281914,
+            159998,
+            1637370,
+            3372000,
+            146400,
+            11902600,
+            1538873,
+            291958,
+            2610181,
+            492556    
           ],
           backgroundColor:[
             'rgba(204, 43, 28)',
@@ -178,7 +177,7 @@ class Chart extends Component{
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Population '+ this.props.location,
+              text:'Consumer Price Index of '+ this.props.location,
               fontSize:25
             },
             legend:{
