@@ -45,26 +45,10 @@ class App extends Component {
               <input type="text" placeholder="Search..." value={this.state.search}
               onChange={this.handleSearch} />
             </div>
-          
-            {/* <div className="Charts">
-            <div className="piechart">
-                <Piechart pieChart={this.state.pieChart} location="Middle East & North Africa" legendPosition="bottom"/>
-            </div>
-            <div className="chart">
-               <Chart chartData={this.state.chartData} location="Middle East & North Africa" legendPosition="bottom"/>
-            </div> 
-            <div className="linechart">
-             <LineChart lineChart={this.state.lineChart} location="Middle East & North Africa" legendPosition="bottom"/>
-             </div>
-         </div>
-       */}
-
-         <Piechart pieChart={this.state.pieChart} location="Middle East & North Africa" legendPosition="bottom"/>
-         <Chart chartData={this.state.chartData} location="Middle East & North Africa" legendPosition="bottom"/>
-         <LineChart lineChart={this.state.lineChart} location="Middle East & North Africa" legendPosition="bottom"/>
 
            <Switch>
               <Route path='/home' render={() => <Home />} />
+              <Route path='/chart' render={() => <Chart location="Middle East & North Africa" legendPosition="bottom"/>} />  
               <Route exact path='/about' render={() => <About />} />  
            </Switch>   
         </div>
