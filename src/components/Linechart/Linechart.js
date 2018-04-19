@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {Bar, Line, Pie} from 'react-chartjs-2';
-import './Chart.css';
+import {Bar, Line, Pie} from 'react-chartjs-2'
+import './Linechart.css';
 
-class Chart extends Component{
+class Linechart extends Component {
   constructor(props){
     super(props);
     this.state = {
-      chartData:props.chartData
+      lineChart: props.lineChart
     }
   }
 
@@ -18,20 +18,20 @@ class Chart extends Component{
   }
 
   componentWillMount(){
-    this.getChartData();
+    this.getLineChart();
   }
 
-  getChartData(){
+  getLineChart(){
     // Ajax calls here
     this.setState({
-      chartData:{
+      lineChart:{
         labels: [
             'United Arab Emirates', 'Egypt', 'Saudi Arabia', 'Syria', 'Bahrain', 'Djibouti', 'Algeria', 'Iran', 'Iraq', 
             'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Libya'
         ],
         datasets:[
           {
-            label:'gdp_pc',
+            label:'cpi',
             data:[
               49600,
               6200,
@@ -79,14 +79,13 @@ class Chart extends Component{
 
   render(){
     return (
-      <div className="chart">
-        
-        <Bar
-          data={this.state.chartData}
+      <div className="line-chart">
+        <Line
+          data={this.state.lineChart}
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'GDP Per Capital '+ this.props.location,
+              text:'Consumer Price Index '+ this.props.location,
               fontSize:25
             },
             legend:{
@@ -94,12 +93,11 @@ class Chart extends Component{
               position:this.props.legendPosition
             }
           }}
-        />
-
-        
+        /> 
       </div>
     )
   }
 }
 
-export default Chart;
+export default Linechart;
+ 

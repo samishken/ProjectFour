@@ -7,6 +7,8 @@ import Home from './components/Home/Home'
 import Marker from './components/Marker/Marker'
 import Country from './components/Country/Country'
 import Chart from './components/Chart/Chart';
+import LineChart from './components/Linechart/Linechart'
+import Piechart from './components/Piechart/Piechart'
 
 class App extends Component {
   constructor (props) {
@@ -15,7 +17,9 @@ class App extends Component {
       countries: [],
       selectedCountry: null,
       search: '',
-      chartData:{}
+      chartData:{},
+      lineChart:{},
+      pieChart:{}
     }
   }
   
@@ -37,17 +41,32 @@ class App extends Component {
     return (
       <div className='app'>
         <div className='main'>
-        
-          <div className="search"> 
-             <input type="text" placeholder="Search..." value={this.state.search}
-             onChange={this.handleSearch} />
-           </div>
+            <div className="search"> 
+              <input type="text" placeholder="Search..." value={this.state.search}
+              onChange={this.handleSearch} />
+            </div>
+          
+            {/* <div className="Charts">
+            <div className="piechart">
+                <Piechart pieChart={this.state.pieChart} location="Middle East & North Africa" legendPosition="bottom"/>
+            </div>
+            <div className="chart">
+               <Chart chartData={this.state.chartData} location="Middle East & North Africa" legendPosition="bottom"/>
+            </div> 
+            <div className="linechart">
+             <LineChart lineChart={this.state.lineChart} location="Middle East & North Africa" legendPosition="bottom"/>
+             </div>
+         </div>
+       */}
+
+         <Piechart pieChart={this.state.pieChart} location="Middle East & North Africa" legendPosition="bottom"/>
+         <Chart chartData={this.state.chartData} location="Middle East & North Africa" legendPosition="bottom"/>
+         <LineChart lineChart={this.state.lineChart} location="Middle East & North Africa" legendPosition="bottom"/>
+
            <Switch>
               <Route path='/home' render={() => <Home />} />
-              <Route exact path='/chart' render={() => <Chart />} />
-              <Route exact path='/country' render={() => <Country />} />
-              <Route exact path='/about' render={() => <About />} />
-           </Switch>  
+              <Route exact path='/about' render={() => <About />} />  
+           </Switch>   
         </div>
       
         <div className='map'>

@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {Bar, Line, Pie} from 'react-chartjs-2';
-import './Chart.css';
+import './Piechart.css';
 
 class Chart extends Component{
   constructor(props){
     super(props);
     this.state = {
-      chartData:props.chartData
+      pieChart: props.pieChart
     }
   }
 
@@ -18,13 +18,13 @@ class Chart extends Component{
   }
 
   componentWillMount(){
-    this.getChartData();
+    this.getPieChart();
   }
 
-  getChartData(){
+  getPieChart(){
     // Ajax calls here
     this.setState({
-      chartData:{
+      pieChart:{
         labels: [
             'United Arab Emirates', 'Egypt', 'Saudi Arabia', 'Syria', 'Bahrain', 'Djibouti', 'Algeria', 'Iran', 'Iraq', 
             'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Libya'
@@ -70,6 +70,7 @@ class Chart extends Component{
     });
   }
 
+
   selectCountry = (country) => {
     console.log(country)
     this.setState({
@@ -79,14 +80,13 @@ class Chart extends Component{
 
   render(){
     return (
-      <div className="chart">
-        
-        <Bar
-          data={this.state.chartData}
+      <div className="pie-chart">
+        <Pie
+          data={this.state.pieChart}
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'GDP Per Capital '+ this.props.location,
+              text:'Population of '+ this.props.location,
               fontSize:25
             },
             legend:{
@@ -94,10 +94,8 @@ class Chart extends Component{
               position:this.props.legendPosition
             }
           }}
-        />
-
-        
-      </div>
+        />  
+         </div>
     )
   }
 }

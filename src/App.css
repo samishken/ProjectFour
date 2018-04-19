@@ -41,3 +41,6 @@
   to { transform: rotate(360deg); }
 }
 
+.piechart {
+  width: 100%;
+}
