@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react'
-import { Link, Switch, Route, Redirect } from 'react-router-dom' 
+import { Link, Switch, Route, Redirect, browserHistory } from 'react-router-dom' 
 import About from './components/About/About'
 import './App.css';
 import Home from './components/Home/Home'
@@ -19,12 +19,17 @@ class App extends Component {
     }
   }
   
+ 
+
   handleSearch = (event) => {
     // this.setState({
     //   search: event.target.value,
     //   countries: this.state.allCountries.filter((country) => new RegExp(event.target.value, "i").exec(country.name))
     // })
   }
+  
+ 
+
   render() {
     let center = {
       lat: 5, lng: 5
@@ -33,6 +38,7 @@ class App extends Component {
     if(this.state.selectedCountry) {
       center = { lat: this.state.selectedCountry.lat, lng: this.state.selectedCountry.lng }
     }
+  
 
     return (
       <div className='app'>
@@ -44,7 +50,7 @@ class App extends Component {
 
            <Switch>
               <Route path='/home' render={() => <Home />} />
-              <Route path='/chart' render={() => <Chart location="Middle East & North Africa" legendPosition="bottom"/>} />  
+              <Route path='/chart' render={() => <Chart handleClick={this.handleClick} location="Middle East & North Africa" legendPosition="bottom"/>} />  
               <Route exact path='/about' render={() => <About />} />  
            </Switch>   
         </div>
