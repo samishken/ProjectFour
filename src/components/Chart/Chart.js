@@ -27,7 +27,7 @@ class Chart extends Component{
   getChartData(){
     // Ajax calls here
     this.setState({
-      chartData:{
+      chartData:{ 
         labels: [
             'United Arab Emirates', 'Egypt', 'Saudi Arabia', 'Syria', 'Bahrain', 'Djibouti', 'Algeria', 'Iran', 'Iraq', 
             'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Libya'
@@ -66,6 +66,22 @@ class Chart extends Component{
               'rgba(153, 102, 255, 0.6)',
               'rgba(255, 159, 64, 0.6)',
               'rgba(255, 99, 132, 0.6)'
+            ],
+            coordinates: [
+              'lat': 23.4241, 'lng': 53.8478,
+              'lat': 26.8206, 'lng': 30.8025,
+              'lat': 23.8859, 'lng': 45.0792,
+              'lat': 34.8021, 'lng': 38.9968,
+              'lat': 26.0667, 'lng': 50.5577,
+              'lat': 11.8251, 'lng': 42.5903,
+              'lat': 28.0339, 'lng': 1.6596,
+              'lat': 32.4279, 'lng': 53.6880,
+              'lat': 33.2232, 'lng': 43.6793,
+              'lat': 31.0461, 'lng': 34.8516,
+              'lat': 30.5852, 'lng': 36.2384,
+              'lat': 29.3117, 'lng': 47.4818,
+              'lat': 33.8547, 'lng': 35.8623,
+              'lat': 26.3351, 'lng': 17.2283
             ]
           }
         ]

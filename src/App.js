@@ -13,13 +13,18 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      countries: [],
-      selectedCountry: null,
+      chartData: [],
+      // selectedCountry: null,
       search: ''
     }
   }
   
  
+  componentDidMount() {
+    this.setState({
+      chartData: this.state.chartData
+    })
+  }
 
   handleSearch = (event) => {
     // this.setState({
@@ -35,9 +40,9 @@ class App extends Component {
       lat: 5, lng: 5
     }
 
-    if(this.state.selectedCountry) {
-      center = { lat: this.state.selectedCountry.lat, lng: this.state.selectedCountry.lng }
-    }
+    // if(this.state.selectedCountry) {
+    //   center = { lat: this.state.selectedCountry.lat, lng: this.state.selectedCountry.lng }
+    // }
   
 
     return (
@@ -49,9 +54,8 @@ class App extends Component {
             </div>
 
            <Switch>
-           
               <Route path='/home' render={() => <Home />} />
-              <Route path='/chart' render={() => <Chart handleClick={this.handleClick} location="Middle East & North Africa" legendPosition="bottom"/>} />  
+              <Route path='/chart' render={() => <Chart location="Middle East & North Africa" legendPosition="bottom"/>} />  
               <Route exact path='/about' render={() => <About />} />  
            </Switch>   
         </div>
@@ -61,10 +65,8 @@ class App extends Component {
                  center={center}
                  // getting map closer to center increase the below number in ZOOM
                  zoom={1}>
-                   {this.state.countries.map((country) => { return <Marker
-                     key={country.name} lat={country.lat}
-                     lng={country.lng} text={country.desc}
-                     selected={country === this.state.selectedCountry}    
+                   {this.state.chartData.map((country) => { return <Marker
+                    lat={country.lat} lng={country.lng}     
                      />
                    })}
                </GoogleMapReact>
