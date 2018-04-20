@@ -9,18 +9,18 @@ nav {
 .navbar {
     text-align: center;
     background: black;
-    color: green;
+    color: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: auto;
     padding: 0 40px;
     white-space: nowrap;
-    background-color: #00F;
+    background-color: white;
     overflow: hidden;
     padding: 1em;
     border-bottom: 1px solid #000;
+    font-weight: bold;
     }
 
-    nav
      

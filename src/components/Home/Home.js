@@ -13,9 +13,7 @@ class Home extends Component {
     return (
       <div className='welcome_page'>
         <div className='greetings'>
-          <h1>Regional Income Level Study for Investment </h1>
-
-          <h3>Evaluating Regional Risk For International Investing</h3>
+         <h1>Evaluating Regional Risk For International Investing</h1>
         </div>
         <div className='container'>
           <Link to='/country'>
