@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import GoogleMapReact from 'google-map-react'
 import { Link, Switch, Route, Redirect, browserHistory } from 'react-router-dom' 
 import About from './components/About/About'
@@ -6,7 +7,8 @@ import './App.css';
 import Home from './components/Home/Home'
 import Marker from './components/Marker/Marker'
 import Country from './components/Country/Country'
-import Chart from './components/Chart/Chart';
+import Chart from './components/Chart/Chart'
+import Navbar from './components/Navbar/Navbar'
 
 
 class App extends Component {
@@ -47,16 +49,18 @@ class App extends Component {
 
     return (
       <div className='app'>
+        <Navbar />
         <div className='main'>
             <div className="search"> 
               <input type="text" placeholder="Search..." value={this.state.search}
               onChange={this.handleSearch} />
             </div>
 
-           <Switch>
+           <Switch>       
               <Route path='/home' render={() => <Home />} />
               <Route path='/chart' render={() => <Chart location="Middle East & North Africa" legendPosition="bottom"/>} />  
               <Route exact path='/about' render={() => <About />} />  
+              
            </Switch>   
         </div>
       
