@@ -8,6 +8,11 @@ import Home from './components/Home/Home'
 import Marker from './components/Marker/Marker'
 import Country from './components/Country/Country'
 import Chart from './components/Chart/Chart'
+import Asia from './components/Asia/Asia'
+import Europe from './components/Europe/Europe'
+import Africa from './components/Subsaharan/Subsaharan'
+import NorthAmerica from './components/NorthAmerica/NorthAmerica'
+import LatinAmerica from './components/LatinAmerica/LatinAmerica'
 import Navbar from './components/Navbar/Navbar'
 
 
@@ -62,6 +67,11 @@ class App extends Component {
            <Switch>       
               <Route path='/home' render={() => <Home />} />
               <Route path='/chart' render={() => <Chart location="Middle East & North Africa" legendPosition="bottom"/>} />  
+              <Route path='/asia' render={() => <Asia location="Asia" legendPosition="bottom"/>} /> 
+              <Route path='/europe' render={() => <Europe location="Europe" legendPosition="bottom"/>} /> 
+              <Route path='/africa' render={() => <Africa location="Africa" legendPosition="bottom"/>} /> 
+              <Route path='/latinamerica' render={() => <LatinAmerica location="Latin America" legendPosition="bottom"/>} /> 
+              <Route path='/northamerica' render={() => <NorthAmerica location="North America" legendPosition="bottom"/>} /> 
               <Route exact path='/about' render={() => <About />} />  
               
            </Switch>   

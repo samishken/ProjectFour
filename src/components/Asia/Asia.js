@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Bar, Line, Pie} from 'react-chartjs-2';
-import './Chart.css';
+import './Asia.css';
 
-class Chart extends Component{
+class Asia extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -64,7 +64,7 @@ class Chart extends Component{
       },
       pieChart: {
         labels: [
-          'United Arab Emirates', 'Egypt', 'Saudi Arabia', 'Syria', 'Bahrain', 'Djibouti'
+          'China', 'Japan', 'S. Korea', 'Taiwan', 'Vietnam', 'Indonesia'
       ],
       datasets:[
         {
@@ -90,7 +90,7 @@ class Chart extends Component{
       },
       lineChart: {
         labels: [
-          'United Arab Emirates', 'Egypt', 'Saudi Arabia', 'Syria', 'Bahrain', 'Djibouti'
+            'China', 'Japan', 'S. Korea', 'Taiwan', 'Vietnam', 'Indonesia'
       ],
       datasets:[
         {
@@ -181,4 +181,4 @@ class Chart extends Component{
   }
 }
 
-export default Chart;
+export default Asia;

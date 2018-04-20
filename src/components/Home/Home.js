@@ -27,11 +27,11 @@ class Home extends Component {
           <div class='link'>
             <ul>
               <li><Link to='/chart' id='link'> Middle East & North Africa</Link></li>
-              <li><Link to='/chart' id='link'> East Asia & Pacific</Link></li>
-              <li><Link to='/chart' id='link'> Europe & Central Asia</Link></li>
-              <li><Link to='/chart' id='link'> Latin America & Caribbean</Link></li>
-              <li><Link to='/chart' id='link'> North America</Link></li>
-              <li><Link to='/chart' id='link'> Sub-Saharan Africa</Link></li>
+              <li><Link to='/asia' id='link'> Asia</Link></li>
+              <li><Link to='/europe' id='link'> Europe</Link></li>
+              <li><Link to='/latinamerica' id='link'> Latin America & Caribbean</Link></li>
+              <li><Link to='/northamerica' id='link'> North America</Link></li>
+              <li><Link to='/africa' id='link'> Sub-Saharan Africa</Link></li>
             </ul>
           </div>
           
