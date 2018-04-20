@@ -49,12 +49,15 @@ class App extends Component {
 
     return (
       <div className='app'>
-        <Navbar />
+        <div className='nav'>
+          <Navbar />
+        </div>
+        
         <div className='main'>
-            <div className="search"> 
+            {/* <div className="search"> 
               <input type="text" placeholder="Search..." value={this.state.search}
               onChange={this.handleSearch} />
-            </div>
+            </div> */}
 
            <Switch>       
               <Route path='/home' render={() => <Home />} />

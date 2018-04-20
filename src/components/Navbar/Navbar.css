@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+}
+nav {
+	background-color: #00F;
+	overflow: hidden;
+    padding: 1em;
+}
+.navbar {
+    text-align: center;
+    background: black;
+    color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto;
+    padding: 0 40px;
+    white-space: nowrap;
+    background-color: #00F;
+    overflow: hidden;
+    padding: 1em;
+    border-bottom: 1px solid #000;
+    }
+
+    nav
+     
