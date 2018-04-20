@@ -43,12 +43,12 @@ class Subsaharan extends Component{
               2800   
             ],
             backgroundColor:[
-              'rgba(204, 43, 28)',
-              'rgba(204, 63, 165)',
-              'rgba(102, 34, 28)',
-              'rgba(161, 236, 83)',
-              'rgba(82, 102, 28)',
-              'rgba(201, 187, 63)'
+                'rgba(204, 43, 28)',
+                'rgba(204, 63, 165)',
+                'rgba(161, 236, 83)',
+                'rgba(82, 102, 28)',
+                'rgba(102, 34, 28)',
+                'rgba(201, 187, 63)'
               
             ],
             coordinates: [
@@ -70,19 +70,19 @@ class Subsaharan extends Component{
         {
           label:'gdp_pc',
           data:[
+            281914,
             8985705,
             8106800,
-            7452533,
-            281914,
             159998,
+            7452533,
             1637370
           ],
           backgroundColor:[
             'rgba(204, 43, 28)',
             'rgba(204, 63, 165)',
-            'rgba(102, 34, 28)',
             'rgba(161, 236, 83)',
             'rgba(82, 102, 28)',
+            'rgba(102, 34, 28)',
             'rgba(201, 187, 63)'
             ]
           }
@@ -96,19 +96,19 @@ class Subsaharan extends Component{
         {
           label:'gdp_pc',
           data:[
-            49600,
             6200,
+            49600,
             24200,
-            4800,
             40300,
+            4800,
             2800
           ],
           backgroundColor:[
             'rgba(204, 43, 28)',
             'rgba(204, 63, 165)',
-            'rgba(102, 34, 28)',
             'rgba(161, 236, 83)',
             'rgba(82, 102, 28)',
+            'rgba(102, 34, 28)',
             'rgba(201, 187, 63)'
             ]
           }

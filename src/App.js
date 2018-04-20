@@ -69,7 +69,7 @@ class App extends Component {
               <Route path='/chart' render={() => <Chart location="Middle East & North Africa" legendPosition="bottom"/>} />  
               <Route path='/asia' render={() => <Asia location="Asia" legendPosition="bottom"/>} /> 
               <Route path='/europe' render={() => <Europe location="Europe" legendPosition="bottom"/>} /> 
-              <Route path='/africa' render={() => <Africa location="Africa" legendPosition="bottom"/>} /> 
+              <Route path='/africa' render={() => <Africa location="Sub-Sahara" legendPosition="bottom"/>} /> 
               <Route path='/latinamerica' render={() => <LatinAmerica location="Latin America" legendPosition="bottom"/>} /> 
               <Route path='/northamerica' render={() => <NorthAmerica location="North America" legendPosition="bottom"/>} /> 
               <Route exact path='/about' render={() => <About />} />  

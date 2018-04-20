@@ -35,11 +35,11 @@ class NorthAmerica extends Component{
           {
             label:'gdp_pc',
             data:[
-              49600,
-              6200,
-              24200,
+              74600,
+              2900,
+              23200,
               4800,
-              40300,
+              30300,
               2800   
             ],
             backgroundColor:[
@@ -78,12 +78,14 @@ class NorthAmerica extends Component{
             1637370
           ],
           backgroundColor:[
+            'rgba(204, 63, 165)',
             'rgba(204, 43, 28)',
             'rgba(204, 63, 165)',
+            'rgba(161, 236, 83)',
             'rgba(102, 34, 28)',
             'rgba(161, 236, 83)',
-            'rgba(82, 102, 28)',
-            'rgba(201, 187, 63)'
+            'rgba(201, 187, 63)',
+            'rgba(82, 102, 28)'
             ]
           }
         ]
@@ -96,12 +98,12 @@ class NorthAmerica extends Component{
         {
           label:'gdp_pc',
           data:[
-            49600,
-            6200,
-            24200,
-            4800,
-            40300,
-            2800
+            74600,
+              42000,
+              23200,
+              5200,
+              40300,
+              5800   
           ],
           backgroundColor:[
             'rgba(204, 43, 28)',
