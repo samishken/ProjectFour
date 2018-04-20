@@ -49,6 +49,7 @@ class App extends Component {
             </div>
 
            <Switch>
+           
               <Route path='/home' render={() => <Home />} />
               <Route path='/chart' render={() => <Chart handleClick={this.handleClick} location="Middle East & North Africa" legendPosition="bottom"/>} />  
               <Route exact path='/about' render={() => <About />} />  
